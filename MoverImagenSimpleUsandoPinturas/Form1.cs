@@ -1,10 +1,25 @@
+// Espacio de nombres como nombre del proyecto a crear.
+
 namespace MoverImagenSimpleUsandoPinturas
 {
+    // Clase completa de la interfaz.
     public partial class Form1 : Form
     {
+        // Variables a declarar.
+
+        Image carta; // Carta de un mazo como imagen.
+        Point posicion = new Point(200, 200); // Posición en donde se encuentra la carta dibujada.
+        bool arrastrar; // Verifica si se arrastra una carta o no.
+        Rectangle rectangulo; // Rectángulo como para dibujar una carta.
+        int altura = 200, ancho = 100; // Altura y ancho de la carta respectivamente, que se calcula de la siguiente manera: 200 * 100.
+
+        // Creado por MARSFOREVER472.
+        // Solamente para objetivos educacionales.
+
+        // Clase de la interfaz.
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); // Método inicial.
         }
 
         // Método para apretar el botón del mouse.
