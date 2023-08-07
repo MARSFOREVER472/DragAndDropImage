@@ -20,6 +20,10 @@ namespace MoverImagenSimpleUsandoPinturas
         public Form1()
         {
             InitializeComponent(); // Método inicial.
+
+            carta = Image.FromFile("card.png"); // Carta normal.
+            // carta = Image.FromFile("guts.jpg"); // Carta especial, que será con comentario hasta ahora, debido a que solamente utilizaremos en la interfaz 1 carta a la vez.
+            rectangulo = new Rectangle(posicion.X, posicion.Y, ancho, altura); // Rectángulo dividido en 4 dimensiones.
         }
 
         // Método para apretar el botón del mouse.
