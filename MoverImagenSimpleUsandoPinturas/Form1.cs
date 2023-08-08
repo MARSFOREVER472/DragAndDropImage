@@ -30,7 +30,15 @@ namespace MoverImagenSimpleUsandoPinturas
 
         private void FormMouseDown(object sender, MouseEventArgs e)
         {
-            // EN INSTANTES...
+            Point posicionMouse = new Point(e.X, e.Y); // Posición en donde se encuentra el mouse al presionar el botón.
+
+            // Vamos a declarar mediante un "if" sobre cómo se va arrastrando la carta al presionar el botón del mouse.
+
+            if (rectangulo.Contains(posicionMouse))
+            {
+                arrastrar = true; // Se va a arrastrar la carta.
+                txtDragOrDrop.Text = "Arrastrando la imagen.";
+            }
         }
 
         // Método para mover el mouse en distintas direcciones.

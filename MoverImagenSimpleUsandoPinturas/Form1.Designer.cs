@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
+            txtDragOrDrop = new Label();
             InterfazTemporizador = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
-            // label1
+            // txtDragOrDrop
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Gray;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Yellow;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(484, 38);
-            label1.TabIndex = 0;
-            label1.Text = "Arrastrando o soltando una imagen";
+            txtDragOrDrop.AutoSize = true;
+            txtDragOrDrop.BackColor = Color.Gray;
+            txtDragOrDrop.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            txtDragOrDrop.ForeColor = Color.Yellow;
+            txtDragOrDrop.Location = new Point(12, 9);
+            txtDragOrDrop.Name = "txtDragOrDrop";
+            txtDragOrDrop.Size = new Size(484, 38);
+            txtDragOrDrop.TabIndex = 0;
+            txtDragOrDrop.Text = "Arrastrando o soltando una imagen";
             // 
             // InterfazTemporizador
             // 
@@ -57,7 +57,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(txtDragOrDrop);
             DoubleBuffered = true;
             Name = "Form1";
             ShowIcon = false;
@@ -72,7 +72,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label txtDragOrDrop;
         private System.Windows.Forms.Timer InterfazTemporizador;
     }
 }
