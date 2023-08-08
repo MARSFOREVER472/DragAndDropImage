@@ -71,7 +71,23 @@ namespace MoverImagenSimpleUsandoPinturas
 
         private void FormPaintEvent(object sender, PaintEventArgs e)
         {
-            // EN INSTANTES...
+            // Para comenzar debemos elegir un tipo de lápiz para dibujar la carta.
+
+            Pen outline; // Tipo de lápiz para dibujar el borde de la carta.
+
+            // Cuando arrastra una carta, el borde de ella será naranja.
+
+            if (arrastrar)
+            {
+                outline = new Pen(Color.Orange, 6); // Para hacer el borde naranja de la carta ya arrastrada.
+            }
+            else // En caso contrario cuando suelta la carta, el borde de ella será dorada.
+            {
+                outline = new Pen(Color.Gold, 6);
+            }
+
+            e.Graphics.DrawRectangle(outline, rectangulo); // Características al dibujar un rectángulo.
+            e.Graphics.DrawImage(carta, posicion.X, posicion.Y, ancho, altura); // Características de la carta a dibujar.
         }
 
         // Método para el temporizador mediante eventos.
