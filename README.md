@@ -14,6 +14,6 @@
 
 2.- Use Rectángulo y Clase de imagen en la aplicación.
 
-3.- Use el mouse hacia abajo, hacia arriba y mueva el evento en el formulario de Windows.
+3.- Use el mouse hacia abajo, hacia arriba y mueva el evento en WIndows Forms.
 
 4.- Use un temporizador para proporcionar una animación más fluida.
