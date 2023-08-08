@@ -45,7 +45,12 @@ namespace MoverImagenSimpleUsandoPinturas
 
         private void FormMouseMove(object sender, MouseEventArgs e)
         {
-            // EN INSTANTES...
+            // Lo vamos a probar ahora con un algoritmo básico al mover el mouse por ahora.
+
+            if (arrastrar) // Si se está arrastrando la carta.
+            {
+                posicion = e.Location; // Se va posicionando a medida que arrastre una carta mientras se mueve el mouse.
+            }
         }
 
         // Método para soltar el botón del mouse.
