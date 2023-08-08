@@ -11,7 +11,7 @@ namespace MoverImagenSimpleUsandoPinturas
         Point posicion = new Point(200, 200); // Posición en donde se encuentra la carta dibujada.
         bool arrastrar; // Verifica si se arrastra una carta o no.
         Rectangle rectangulo; // Rectángulo como para dibujar una carta.
-        int altura = 200, ancho = 100; // Altura y ancho de la carta respectivamente, que se calcula de la siguiente manera: 200 * 100.
+        int altura = 200, ancho = 135; // Altura y ancho de la carta respectivamente, que se calcula de la siguiente manera: 200 * 100.
 
         // Creado por MARSFOREVER472.
         // Solamente para objetivos educacionales.
@@ -94,7 +94,12 @@ namespace MoverImagenSimpleUsandoPinturas
 
         private void FormTimerEvent(object sender, EventArgs e)
         {
-            // EN INSTANTES...
+            // Se fijarán las posiciones del rectángulo en X e Y.
+
+            rectangulo.X = posicion.X; // Distancia en X.
+            rectangulo.Y = posicion.Y; // Distancia en Y.
+
+            this.Invalidate(); // Esto sería infinito :/ ... 
         }
     }
 }
