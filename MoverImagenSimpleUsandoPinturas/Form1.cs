@@ -57,7 +57,14 @@ namespace MoverImagenSimpleUsandoPinturas
 
         private void FormMouseUp(object sender, MouseEventArgs e)
         {
-            // EN INSTANTES...
+            // Haremos el mismo procedimiento pero soltando el botón del mouse.
+
+            if (arrastrar)
+            {
+                arrastrar = false; // Al soltar el botón, la carta dejará de arrastrar y lo suelta.
+                rectangulo.Location = new Point(e.X, e.Y); // Ubicación del rectángulo al soltar la carta.
+                txtDragOrDrop.Text = "Imagen soltada @ " + rectangulo.Location.ToString(); // Mediante texto con la misma variable se va grabando de distinta forma al soltar la carta.
+            }
         }
 
         // Método para ilustrar imágenes mediante eventos.
