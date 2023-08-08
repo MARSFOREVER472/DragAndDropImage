@@ -21,8 +21,8 @@ namespace MoverImagenSimpleUsandoPinturas
         {
             InitializeComponent(); // Método inicial.
 
-            carta = Image.FromFile("card.png"); // Carta normal.
-            // carta = Image.FromFile("guts.jpg"); // Carta especial, que será con comentario hasta ahora, debido a que solamente utilizaremos en la interfaz 1 carta a la vez.
+            // carta = Image.FromFile("card.png"); // Carta normal.
+            carta = Image.FromFile("guts.jpg"); // Carta especial.
             rectangulo = new Rectangle(posicion.X, posicion.Y, ancho, altura); // Rectángulo dividido en 4 dimensiones.
         }
 
@@ -49,7 +49,8 @@ namespace MoverImagenSimpleUsandoPinturas
 
             if (arrastrar) // Si se está arrastrando la carta.
             {
-                posicion = e.Location; // Se va posicionando a medida que arrastre una carta mientras se mueve el mouse.
+                posicion.X = e.X - (ancho / 2); // Posición en X al mover el mouse.
+                posicion.Y = e.Y - (altura / 2); // Posición en Y al mover el mouse.
             }
         }
 
